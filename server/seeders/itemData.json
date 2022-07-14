@@ -1,0 +1,50 @@
+[
+    {
+    "itemName": "Dragon Scimitar",
+    "image": "",
+    "price": 250,
+    "description": "A vicious, curved sword.",
+    "category": "Weapon",
+    "gameName": "Runescape"
+    },
+    {
+    "itemName": "Abyssal Whip",
+    "image": "",
+    "price": 1500,
+    "description": "A weapon from the Abyss.",
+    "category": "Weapon",
+    "gameName": "Runescape"
+    },
+    {
+    "itemName": "Author Morgan's Hat",
+    "image": "",
+    "price": 100,
+    "description": "A nice Wide-brimmed cowboy hat",
+    "category": "Cosmetic",
+    "gameName": "Red Dead Redemption 2"
+    },
+    {
+    "itemName": "Ray-Gun",
+    "image": "",
+    "price": 600,
+    "description": "Pew-Pew",
+    "category": "Weapon",
+    "gameName": "Call of Duty Zombies"
+    },
+    {
+    "itemName": "Cactus Juice",
+    "image": "",
+    "price": 50,
+    "description": "Its the JUICIEST!",
+    "category": "Consumable",
+    "gameName": "Avatar: The last Airbender"
+    },
+    {
+    "itemName": "Dragon ChainBody",
+    "image": "",
+    "price": 500,
+    "description": "A series of connected metal rings.",
+    "category": "Armor",
+    "gameName": "Runescape"
+    }
+]
