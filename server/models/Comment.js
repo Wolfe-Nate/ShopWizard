@@ -13,7 +13,7 @@ const commentSchema = new Schema(
       default: Date.now,
     },
     username: {
-      type: Schema.Types.ObjectId,
+      type: String,
       ref: "User",
     },
   },
@@ -27,4 +27,4 @@ const commentSchema = new Schema(
 
 const Comment = model("Comment", commentSchema);
 
-model.exports = Comment;
+module.exports = Comment;

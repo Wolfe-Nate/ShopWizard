@@ -11,7 +11,7 @@ const itemSchema = new Schema(
     // referencing an image filename we have in our repo
     image: {
       type: String,
-      required: true,
+      // required: true,
     },
     price: {
       type: Number,
@@ -22,20 +22,20 @@ const itemSchema = new Schema(
     },
     category: [
       {
-        type: Schema.Types.ObjectId,
-        ref: "Category",
+        type: String,
+        // ref: "Category",
       },
     ],
     gameName: [
       {
-        type: Schema.Type.ObjectId,
-        ref: "Games",
+        type: String,
+        // ref: "Game",
       },
     ],
     comments: [
       {
-        type: Schema.Type.ObjectId,
-        ref: "Comment",
+        type: String,
+        // ref: "Comment",
       },
     ],
   },

@@ -11,7 +11,7 @@ const userSchema = new Schema(
     password: {
       type: String,
       required: true,
-      validate: [validatePassword],
+      // validate: [validatePassword],
     },
     coins: {
       type: Number,

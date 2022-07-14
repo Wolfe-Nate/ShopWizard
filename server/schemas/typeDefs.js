@@ -1,4 +1,3 @@
-
 const { gql } = require("apollo-server-express");
 
 const typeDefs = gql`
@@ -16,8 +15,6 @@ const typeDefs = gql`
     itemName: String
     image: String
     price: Int
-    category: [Category]
-    gameName: Games
     comments: [Comment]
   }
 
@@ -38,4 +35,3 @@ const typeDefs = gql`
 `;
 
 module.exports = typeDefs;
-
