@@ -1,7 +1,7 @@
 const { Schema, model } = require("mongoose");
 
-const categorySchema = new Schema({
-  categoryName: {
+const gameSchema = new Schema({
+  gameName: {
     type: String,
     unique: true,
     required: true,
@@ -9,6 +9,6 @@ const categorySchema = new Schema({
   },
 });
 
-const Category = model("Category", categorySchema);
+const Game = model("Game", gameSchema);
 
-module.exports = Category;
+module.exports = Game;
