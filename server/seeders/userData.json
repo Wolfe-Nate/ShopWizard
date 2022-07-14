@@ -1,0 +1,15 @@
+
+[
+    {
+        "username": "csmith",
+        "password": "123456",
+        "coins":"1000",
+        "admin": "true"
+    },
+    {
+        "username": "test",
+        "password": "123456",
+        "coins":"1000",
+        "admin": "false"
+    }
+]
