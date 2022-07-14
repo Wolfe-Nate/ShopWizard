@@ -1,1 +1,18 @@
+<<<<<<< HEAD
+[
+    {
+        "username": "csmith",
+        "password": "123456",
+        "coins":"1000",
+        "admin": "true"
+    },
+    {
+        "username": "test",
+        "password": "123456",
+        "coins":"1000",
+        "admin": "false"
+    }
+]
+=======
 // asdf
+>>>>>>> d1cb1142f2ae90919d42715ec850ffde20908673
