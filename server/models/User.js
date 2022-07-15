@@ -13,14 +13,26 @@ const userSchema = new Schema(
       required: true,
       // validate: [validatePassword],
     },
+    email: {
+      type: String,
+      unique: true,
+      required: true,
+      trim: true,
+    },
     coins: {
       type: Number,
       required: true,
     },
-    purchases: [
+    items: [
       {
         type: Schema.Types.ObjectId,
         ref: "Item",
+      },
+    ],
+    comments: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "Comment",
       },
     ],
     admin: {
@@ -40,6 +52,8 @@ const userSchema = new Schema(
     id: false,
   }
 );
+
+// Need to create virtual for commentCount
 
 const User = model("User", userSchema);
 

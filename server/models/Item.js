@@ -9,7 +9,7 @@ const itemSchema = new Schema(
       trim: true,
     },
     // referencing an image filename we have in our repo
-    image: {
+    itemImage: {
       type: String,
       // required: true,
     },
@@ -45,6 +45,8 @@ const itemSchema = new Schema(
     id: false,
   }
 );
+
+// Need to create virtual for commentCount
 
 const Item = model("Item", itemSchema);
 
