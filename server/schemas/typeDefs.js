@@ -7,30 +7,35 @@ const typeDefs = gql`
 
   type Item {
     _id: ID
-    itemTitle: String
-    itemSummary: String
-    itemDescription: String
-    itemStartDate: DateTime
-    itemStatus: String
-    itemAuthor: String
+    itemName: String
+    price: Int
+    description: String
+    category: String
+    gameName: String
+    // itemStatus: String
+    // itemAuthor: String
     createdAt: String
-    username: String
-    commentCount: Int
     comments: [Comment]
+    commentCount: Int
   }
 
   type Comment {
     _id: ID
     commentText: String
     createdAt: String
-    username: String
+    username: User
   }
 
   type User {
     _id: ID
     username: String
     email: String
+    coins: Int
     items: [Item]
+    comments: [Comment]
+    commentCount: Int
+    admin: Boolean
+    createdAt: String
   }
 
   type Auth {
@@ -50,11 +55,11 @@ const typeDefs = gql`
     login(email: String!, password: String!): Auth
     addUser(username: String!, email: String!, password: String!): Auth
     addItem(
-      itemTitle: String!
-      itemSummary: String!
-      itemDescription: String!
-      itemStartDate: String!
-      itemStatus: String!
+      itemName: String!
+      itemImage: String!
+      description: String!
+      category: String!
+      gameName: String!
     ): Item
     addComment(itemId: ID!, commentText: String!): Item
   }

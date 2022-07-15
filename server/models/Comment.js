@@ -5,7 +5,7 @@ const commentSchema = new Schema(
     commentText: {
       type: String,
       required: true,
-      minLength: 5,
+      minLength: 4,
       maxLength: 280,
     },
     createdAt: {
