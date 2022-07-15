@@ -1,36 +1,62 @@
+// imports
 const { gql } = require("apollo-server-express");
 
+// create our typeDefs
 const typeDefs = gql`
-  type User {
-    _id: ID
-    username: String
-    coins: Int
-    purchases: [Item]
-    admin: Boolean
-    createdAt: String
-  }
+  scalar DateTime
 
   type Item {
     _id: ID
-    itemName: String
-    image: String
-    price: Int
+    itemTitle: String
+    itemSummary: String
+    itemDescription: String
+    itemStartDate: DateTime
+    itemStatus: String
+    itemAuthor: String
+    createdAt: String
+    username: String
+    commentCount: Int
     comments: [Comment]
   }
 
   type Comment {
+    _id: ID
     commentText: String
     createdAt: String
-    username: [User]
+    username: String
+  }
+
+  type User {
+    _id: ID
+    username: String
+    email: String
+    items: [Item]
+  }
+
+  type Auth {
+    token: ID!
+    user: User
   }
 
   type Query {
+    me: User
     users: [User]
-    items: [Item]
-    comments: [Comment]
-    user(id: ID!): User
-    item(id: ID!): Item
-    comment(id: ID!): Comment
+    user(username: String!): User
+    items(username: String): [Item]
+    item(_id: ID!): Item
+  }
+
+  type Mutation {
+    login(email: String!, password: String!): Auth
+    addUser(username: String!, email: String!, password: String!): Auth
+    addItem(
+      itemTitle: String!
+      itemSummary: String!
+      itemDescription: String!
+      itemStartDate: String!
+      itemStatus: String!
+    ): Item
+    addComment(itemId: ID!, commentText: String!): Item
   }
 `;
 
