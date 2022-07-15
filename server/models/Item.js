@@ -20,22 +20,21 @@ const itemSchema = new Schema(
     description: {
       type: String,
     },
-    category: [
-      {
-        type: String,
-        // ref: "Category",
-      },
-    ],
-    gameName: [
-      {
-        type: String,
-        // ref: "Game",
-      },
-    ],
+    category: {
+      type: String,
+      unique: true,
+      required: true,
+      maxLength: 30,
+    },
+    gameName: {
+      type: String,
+      required: true,
+      maxLength: 30,
+    },
     comments: [
       {
         type: String,
-        // ref: "Comment",
+        ref: "Comment",
       },
     ],
   },
