@@ -7,12 +7,18 @@ import React from 'react';
 function Home() {
     const message = '';
     return (
-      <div className="rpgui-container.framed">
-        <h1 className='rpgui-content h1'>Welcome, weary traveler...</h1>
-        <div className='rpgui-content a' >
-        Login
-        </div>
-      </div>
+      <div className="rpgui-content">
+  <div className="rpgui-container framed rpgui-draggable" style="position:fixed; right:0px; bottom:0px;">
+    <card>
+    <button className="rpgui-button" type="button" style="width:200%"><p>Sign Up</p></button>
+  </card>
+  </div>
+  <div className="rpgui-container framed rpgui-draggable" style="left:280px">
+    <card>
+    <button className="rpgui-button" type="button" style="width:200%"><p>Login</p></button>
+  </card>
+  </div>
+</div>
       
     );
   }

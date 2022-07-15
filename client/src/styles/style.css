@@ -100,7 +100,7 @@ inside your html file.
   overflow: hidden;
   outline: none;
   /* background */
-  background: url("img/button-golden.png") no-repeat no-repeat;
+  background: url("../img/button-golden.png") no-repeat no-repeat;
   background-clip: padding-box;
   background-origin: padding-box;
   background-position: center;
@@ -315,7 +315,7 @@ inside your html file.
   position: relative;
   /* border */
   border-style: solid;
-  border-image-source: url("img/border-image-grey.png");
+  border-image-source: url("../img/border-image-grey.png");
   border-image-repeat: repeat;
   border-image-slice: 3 3 3 3;
   border-image-width: 7px;
@@ -478,7 +478,7 @@ ul.rpgui-dropdown-imp {
   background-repeat: no-repeat;
   width: 64px;
   height: 64px; }
-../
+
 .rpgui-icon.sword {
   background-image: url("../img/icons/sword.png"); }
 
