@@ -1,4 +1,5 @@
 const { Schema, model } = require("mongoose");
+const bcrypt = require("bcrypt");
 
 const userSchema = new Schema(
   {
@@ -11,17 +12,17 @@ const userSchema = new Schema(
     password: {
       type: String,
       required: true,
-      // validate: [validatePassword],
     },
     email: {
       type: String,
       unique: true,
       required: true,
-      trim: true,
+      match: [/.+@.+\..+/, "Must use a valid email address"],
     },
     coins: {
       type: Number,
       required: true,
+      default: 200,
     },
     items: [
       {
@@ -53,7 +54,30 @@ const userSchema = new Schema(
   }
 );
 
-// Need to create virtual for commentCount
+// Hash user's password
+userSchema.pre("save", async function (next) {
+  if (this.isNew || this.isModified("password")) {
+    const saltRounds = 10;
+    this.password = await bcrypt.hash(this.password, saltRounds);
+  }
+
+  next();
+});
+
+//Validate password function
+userSchema.methods.validatePassword = async function (password) {
+  return bcrypt.compare(password, this.password);
+};
+
+// commentCount virtual will return total comments made by this user
+userSchema.virtual("commentCount").get(function () {
+  return this.comments.length;
+});
+
+// itemCount virtual will return total comments made by this user
+userSchema.virtual("itemsCount").get(function () {
+  return this.items.length;
+});
 
 const User = model("User", userSchema);
 

@@ -12,8 +12,6 @@ const typeDefs = gql`
     description: String
     category: String
     gameName: String
-    // itemStatus: String
-    // itemAuthor: String
     createdAt: String
     comments: [Comment]
     commentCount: Int
@@ -32,6 +30,7 @@ const typeDefs = gql`
     email: String
     coins: Int
     items: [Item]
+    itemsCount: Int
     comments: [Comment]
     commentCount: Int
     admin: Boolean
@@ -48,6 +47,7 @@ const typeDefs = gql`
     users: [User]
     comments: [Comment]
     items: [Item]
+    user(_id: ID!): User
     user(username: String!): User
     items(username: String): [Item]
     item(_id: ID!): Item
