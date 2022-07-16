@@ -47,9 +47,8 @@ const typeDefs = gql`
     users: [User]
     comments: [Comment]
     items: [Item]
-    user(_id: ID!): User
     user(username: String!): User
-    items(username: String): [Item]
+    userItems(username: String!): [Item]
     item(_id: ID!): Item
   }
 
