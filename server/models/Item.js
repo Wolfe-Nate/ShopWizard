@@ -19,10 +19,11 @@ const itemSchema = new Schema(
     },
     description: {
       type: String,
+      maxLength: 280,
     },
     category: {
       type: String,
-      unique: true,
+      // unique: true,
       required: true,
       maxLength: 30,
     },
@@ -47,6 +48,9 @@ const itemSchema = new Schema(
 );
 
 // Need to create virtual for commentCount
+itemSchema.virtual("commentCount").get(function () {
+  return this.comments.length;
+});
 
 const Item = model("Item", itemSchema);
 
