@@ -5,7 +5,7 @@ import '../styles/style.css';
 function Header() {
   return (
     <header className="header">
-      <h1>Home</h1>
+      <h1>Homepage</h1>
     </header>
   );
 }
