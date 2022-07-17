@@ -5,19 +5,26 @@ import React from 'react';
 // import Card from './components/Card';
 
 function Home() {
-    const message = '';
+
     return (
       <div className="rpgui-content">
-  <div className="rpgui-container framed rpgui-draggable" style="position:fixed; right:0px; bottom:0px;">
+  <div className="rpgui-container framed rpgui-draggable" >
     <card>
-    <button className="rpgui-button" type="button" style="width:200%"><p>Sign Up</p></button>
+    <button className="rpgui-button" type="button" ><p>Sign Up</p></button>
   </card>
   </div>
-  <div className="rpgui-container framed rpgui-draggable" style="left:280px">
+  <div style={{
+          marginLeft: '8rem',
+          fontSize: '20px',
+          padding: '20px',
+          color: 'white',
+        }} 
+        className="rpgui-container framed rpgui-draggable">
     <card>
-    <button className="rpgui-button" type="button" style="width:200%"><p>Login</p></button>
+    <button className="rpgui-button" type="button"><p>Login</p></button>
   </card>
   </div>
+  
 </div>
       
     );
