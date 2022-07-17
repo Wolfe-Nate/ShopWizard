@@ -2,18 +2,24 @@ const { AuthenticationError } = require("apollo-server-express");
 const { User, Item } = require("../models");
 const { signToken } = require("../utils/auth");
 
+// Query: get all users, get user by Id, get user by admin status, get user by username?,
+//get all items, get item by id, get items by category, get items by gameName,
+// get all comments, get comment by id
+// add item to user (purchase)
+//
+
 const resolvers = {
   Query: {
-    me: async (parent, args, context) => {
-      if (context.user) {
-        const userData = await User.findOne({ _id: context.user._id })
-          .select("-__v -password")
-          .populate("items");
+    // me: async (parent, args, context) => {
+    //   if (context.user) {
+    //     const userData = await User.findOne({ _id: context.user._id })
+    //       .select("-__v -password")
+    //       .populate("items");
 
-        return userData;
-      }
-      throw new AuthenticationError("Not logged in");
-    },
+    //     return userData;
+    //   }
+    //   throw new AuthenticationError("Not logged in");
+    // },
     // get all items
     items: async (parent, { username }) => {
       const params = username ? { username } : {};
@@ -25,13 +31,19 @@ const resolvers = {
     },
     // get all users
     users: async () => {
-      return User.find().select("-__v -password").populate("items");
+      return (
+        User.find()
+          // .select("-__v -password")
+          .populate("items")
+      );
     },
     // get a user by username
     user: async (parent, { username }) => {
-      return User.findOne({ username })
-        .select("-__v -password")
-        .populate("items");
+      return (
+        User.findOne({ username })
+          // .select("-__v -password")
+          .populate("items")
+      );
     },
   },
   Mutation: {
@@ -92,6 +104,18 @@ const resolvers = {
 
       throw new AuthenticationError("You need to be logged in!");
     },
+    // purchaseItem: async (parent, { profileId, item }) => {
+    //   return Profile.findOneAndUpdate(
+    //     { _id: profileId },
+    //     {
+    //       $addToSet: { items: item },
+    //     },
+    //     {
+    //       new: true,
+    //       runValidators: true,
+    //     }
+    //   );
+    // },
   },
 };
 
