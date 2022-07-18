@@ -1,46 +1,37 @@
 import React from "react";
 
-function Admin() {
-    return (
-      <div
-        class="rpgui-container framed rpgui-draggable"
-        style={{
-          marginLeft: "25%",
-          position: "center",
-          alignItems: "center",
-          fontSize: ".9rem",
-          padding: "1rem",
-          height: "45%",
-          width: "45%",
-        }}
-      >
-        <h1>Add Item Form</h1>
-        <hr />
-
+function Additem() {
+  return (
+    <div
+      class="rpgui-container framed rpgui-draggable"
+      style={{
+        marginLeft: "25%",
+        position: "center",
+        alignItems: "center",
+        fontSize: ".9rem",
+        padding: "1rem",
+        height: "90%",
+        width: "45%",
+      }}
+    >
+      <h1>Add Item Form</h1>
+      <hr />
+      <form>
         <label>Item Name:</label>
         <input
+          input
           type="text"
           name="itemName"
-          value=""
           placeholder="What is this Item?"
         />
         <br />
         <br />
         <label>Price:</label>
         <input
+          input
           type="text"
           name="ItemPrice"
-          value=""
           placeholder="What is this items Price?"
-        />
-        <br />
-        <br />
-        <label>Item Image</label>
-        <input
-          type="text"
-          name="itemImage"
-          value=""
-          placeholder="Link a picture of the Item"
         />
         <br />
         <br />
@@ -48,7 +39,6 @@ function Admin() {
         <input
           type="text"
           name="itemDesc"
-          value=""
           placeholder="A quick description of this item"
         />
         <br />
@@ -56,19 +46,32 @@ function Admin() {
         <label>Game of Origin</label>
         <input
           type="text"
-          name="itemGame"
-          value=""
+          name="gameName"
           placeholder="What Game is this Item Found in?"
         />
         <br />
         <br />
-        <label>Category</label>
+        <p>What Category is this Item? (Choose Only One)</p>
+        <input type="checkbox" id="weapon" name="Weapon" value="Weapon" />
+        <label for="weapon">WEAPON</label>
+        <br />
+        <input type="checkbox" id="armor" name="Armor" value="Armor" />
+        <label for="armor">ARMOR</label>
+        <br />
         <input
-          type="text"
-          name="category"
-          value=""
-          placeholder="What Game is this Item Found in?"
+          type="checkbox"
+          id="consumable"
+          name="consumable"
+          value="consumable"
         />
-      </div>
-    );
+        <label for="consumable">CONSUMABLE</label>
+        <br />
+        <input type="checkbox" id="cosmetic" name="cosmetic" value="cosmetic" />
+        <label for="cosmetic">COSMETIC</label>
+        <br />
+      </form>
+    </div>
+  );
 }
+
+export default Additem;

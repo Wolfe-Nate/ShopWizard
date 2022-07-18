@@ -3,6 +3,7 @@ import SignUp from "../src/pages/Signup";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "../src/pages/Home";
+import Additem from "./pages/Additem";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ApolloClient, InMemoryCache, ApolloProvider } from "@apollo/client";
 
@@ -21,6 +22,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/signup" element={<SignUp />} />
+            <Route path="/Additem" element={<Additem />} />
           </Routes>
         </Router>
         <Footer />
