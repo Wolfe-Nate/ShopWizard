@@ -292,6 +292,7 @@ inside your html file.
 
 /* game div with golden2 background image*/
 .rpgui-container.framed-golden-2 {
+  position: relative;
   /* border */
   border-style: solid;
   border-image-source: url("../img/border-image-golden2.png");
@@ -478,6 +479,13 @@ ul.rpgui-dropdown-imp {
   background-repeat: no-repeat;
   width: 64px;
   height: 64px; }
+
+.rpgui-icon.coin {
+  background-image: url("../img/radio-golden-off.png");
+}
+.rpgui-icon.rslogo {
+  background-image: url("../img/RSLogo.jpg");
+}
 
 .rpgui-icon.sword {
   background-image: url("../img/icons/sword.png"); }
@@ -973,3 +981,45 @@ ul.rpgui-list-imp {
   left: 40px;
   background-image: url("../img/slider-thumb-golden.png");
   background-size: 100% 100%; }
+
+
+
+.hovertext {
+  position: relative;
+  border-bottom: 1px dotted black;
+}
+
+.hovertext:before {
+  content: attr(data-hover);
+  visibility: hidden;
+  opacity: 0;
+  width: 140px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px 0;
+  transition: opacity 1s ease-in-out;
+
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 110%;
+}
+
+.hovertext:hover:before {
+  opacity: 1;
+  visibility: visible;
+}
+
+.itemImage {
+  display: inline-block;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  width: 120px;
+  height: 120px;}
+
+.itemImage.scimitar {
+  background-image: url("../img/dragon_scimitar.jpg");
+}
+
