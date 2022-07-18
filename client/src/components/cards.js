@@ -15,7 +15,7 @@ const ItemCard = ({ items }) => {
         <div>
             {items &&
                 items.map((item) => (
-                    <div className="rpgui-content"
+                    <div 
                         style={{
                             width: '280px',
                             height: '415px',
