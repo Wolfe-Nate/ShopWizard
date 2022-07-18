@@ -9,3 +9,29 @@ export const ADD_USER = gql`
     }
   }
 `;
+
+export const ADD_ITEM = gql`
+  mutation AddItem(
+    $itemName: String!
+    $price: Int!
+    $description: String!
+    $category: String!
+    $gameName: String!
+  ) {
+    addItem(
+      itemName: $itemName
+      price: $price
+      description: $description
+      category: $category
+      gameName: $gameName
+    ) {
+      _id
+      itemName
+      price
+      description
+      category
+      gameName
+      createdAt
+    }
+  }
+`;

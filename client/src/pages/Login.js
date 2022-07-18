@@ -11,7 +11,7 @@ function Login() {
         fontSize: ".9rem",
         padding: "1rem",
         height: "45%",
-        width: "45%"
+        width: "45%",
       }}
     >
       <h1>Login</h1>
@@ -33,30 +33,32 @@ function Login() {
       <br />
 
       <label>Your hero bio:</label>
-      <textarea rows="3" cols="50">
-        
-      </textarea>
-      <button class="rpgui-button" type="button" 
-      style={{
-        float: "right",
-        justifyContent: "center",
-        fontSize: ".9rem",
-        padding: "1rem",
-        height: "15%",
-        width: "5%"
-      }}
-      ><p
-      style={{
-        position: "relative",
-        float: "right",
-        justifyContent: "center",
-        fontSize: ".9rem",
-      }}
-      >Login</p>
+      <textarea rows="3" cols="50"></textarea>
+      <button
+        class="rpgui-button"
+        type="button"
+        style={{
+          float: "right",
+          justifyContent: "center",
+          fontSize: ".9rem",
+          padding: "1rem",
+          height: "15%",
+          width: "5%",
+        }}
+      >
+        <p
+          style={{
+            position: "relative",
+            float: "right",
+            justifyContent: "center",
+            fontSize: ".9rem",
+          }}
+        >
+          Login
+        </p>
       </button>
       <hr class="golden" />
-      <a href="#"> Don't have an account? Sign Up</a>
-      
+      <a href="/signup"> Don't have an account? Sign Up</a>
     </div>
   );
 }
