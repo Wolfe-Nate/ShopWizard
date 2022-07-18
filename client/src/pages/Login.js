@@ -8,14 +8,13 @@ function Login() {
         marginLeft: "8rem",
         fontSize: "20px",
         padding: "20px",
-        color: "white",
       }}
     >
       <h1>Inputs</h1>
       <hr />
 
       <label>Your hero name:</label>
-      <input type="text" name="FirstName" value="Bob" placeholder="Hero name" />
+      <input type="text" name="FirstName" value="" placeholder="Hero name" />
       <br />
       <br />
 
@@ -23,7 +22,7 @@ function Login() {
       <input
         type="text"
         name="FirstName"
-        value="The Destroyer"
+        value=""
         placeholder="Hero last name"
       />
       <br />
@@ -31,13 +30,11 @@ function Login() {
 
       <label>Your hero bio:</label>
       <textarea rows="3" cols="50">
-        Bob The Destroyer likes to destroy stuff.
+        
       </textarea>
 
-      <p>Here is a paragraph.</p>
-      <label>Golden hr:</label>
       <hr class="golden" />
-      <a href="#"> And this is a link.</a>
+      <a href="#"> Don't have an account? Sign Up</a>
     </div>
   );
 }
