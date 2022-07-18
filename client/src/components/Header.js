@@ -8,14 +8,14 @@ import '../styles/bat.css'
 function Header() {
   return (
     <header className="header"
-    style={{
-      fontSize: "30px",
-      padding: "20px",
-    }}
+      style={{
+        fontSize: "30px",
+        padding: "20px",
+      }}
     >
       <h1>SHOP WIZARD</h1>
       <div class="bat" >
-{/* <img 
+        {/* <img 
 src={speechBubble} alt="speech bubble"
 style={{
   width: "5000%",
