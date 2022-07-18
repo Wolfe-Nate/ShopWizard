@@ -2,8 +2,8 @@ const { AuthenticationError } = require("apollo-server-express");
 const { User, Item, Comment } = require("../models");
 const { signToken } = require("../utils/auth");
 
-//Done: get all users, get user by ID, get all items, get item by ID, get all comments, get comment by ID
-//To Do: Queries: get "me" Mutations: login, purchaseItem, addComment, addUser (Sign up)
+//Done: get all users, get user by ID, get all items, get item by ID, get all comments, get comment by ID, addUser (sign up), login (auth)
+//To Do: Queries: get "me" Mutations: purchaseItem (requires context:me), addComment
 
 const resolvers = {
   Query: {
@@ -30,6 +30,7 @@ const resolvers = {
     //   const params = username ? { username } : {};
     //   return item.find(params).sort({ createdAt: -1 });
     // },
+
     // get one item by ID -- fixed Working
     item: async (parent, { _id }) => {
       return await Item.findOne({ _id }).populate("comments");
@@ -79,28 +80,28 @@ const resolvers = {
         gameName,
       });
     },
-    //   addUser: async (parent, args) => {
-    //     const user = await User.create(args);
-    //     const token = signToken(user);
+    addUser: async (parent, { username, password }) => {
+      const user = await User.create({ username, password });
+      const token = signToken(user);
 
-    //     return { token, user };
-    //   },
-    //   login: async (parent, { email, password }) => {
-    //     const user = await User.findOne({ email });
+      return { token, user };
+    },
+    login: async (parent, { username, password }) => {
+      const user = await User.findOne({ username });
 
-    //     if (!user) {
-    //       throw new AuthenticationError("Incorrect credentials");
-    //     }
+      if (!user) {
+        throw new AuthenticationError("No user found with this username!");
+      }
 
-    //     const correctPw = await user.isCorrectPassword(password);
+      const correctPw = await user.validatePassword(password);
 
-    //     if (!correctPw) {
-    //       throw new AuthenticationError("Incorrect credentials");
-    //     }
+      if (!correctPw) {
+        throw new AuthenticationError("Incorrect credentials");
+      }
 
-    //     const token = signToken(user);
-    //     return { token, user };
-    //   },
+      const token = signToken(user);
+      return { token, user };
+    },
 
     //Add Item
     // addItem: async (parent, { itemId }) => {
