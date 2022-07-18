@@ -17,8 +17,8 @@ body {
   position: relative;
   left: 85%;
   /* top: -128px; */
-  -webkit-animation: 0.4s bat steps(1) infinite;
-          animation: 0.4s bat steps(1) infinite;
+  -webkit-animation: 0.5s bat steps(1) infinite;
+          animation: 0.5s bat steps(1) infinite;
           z-index: 2;
 }
 

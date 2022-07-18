@@ -5,12 +5,16 @@ function Login() {
     <div
       class="rpgui-container framed rpgui-draggable"
       style={{
-        marginLeft: "8rem",
-        fontSize: "20px",
-        padding: "20px",
+        marginLeft: "25%",
+        position: "center",
+        alignItems: "center",
+        fontSize: ".9rem",
+        padding: "1rem",
+        height: "45%",
+        width: "45%"
       }}
     >
-      <h1>Inputs</h1>
+      <h1>Login</h1>
       <hr />
 
       <label>Your hero name:</label>
@@ -32,9 +36,27 @@ function Login() {
       <textarea rows="3" cols="50">
         
       </textarea>
-
+      <button class="rpgui-button" type="button" 
+      style={{
+        float: "right",
+        justifyContent: "center",
+        fontSize: ".9rem",
+        padding: "1rem",
+        height: "15%",
+        width: "5%"
+      }}
+      ><p
+      style={{
+        position: "relative",
+        float: "right",
+        justifyContent: "center",
+        fontSize: ".9rem",
+      }}
+      >Login</p>
+      </button>
       <hr class="golden" />
       <a href="#"> Don't have an account? Sign Up</a>
+      
     </div>
   );
 }
