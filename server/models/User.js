@@ -16,7 +16,7 @@ const userSchema = new Schema(
     coins: {
       type: Number,
       // required: true,
-      default: 200,
+      default: 2000,
     },
     items: [
       {
