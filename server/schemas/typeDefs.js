@@ -45,11 +45,10 @@ const typeDefs = gql`
   type Query {
     me: User
     users: [User]
-    userById(userId: ID!): User
+    userId(_id: ID!): User
     comments: [Comment]
+    comment(_id: ID!): Comment
     items: [Item]
-    user(username: String!): User
-    userItems(username: String!): [Item]
     item(_id: ID!): Item
   }
 
@@ -58,7 +57,7 @@ const typeDefs = gql`
     addUser(username: String!, email: String!, password: String!): Auth
     addItem(
       itemName: String!
-      itemImage: String!
+      price: Int!
       description: String!
       category: String!
       gameName: String!
@@ -66,5 +65,7 @@ const typeDefs = gql`
     addComment(itemId: ID!, commentText: String!): Item
   }
 `;
+
+// removed user(username: String!): User & userItems(username: String!): [Item] because I don't think we'll need these
 
 module.exports = typeDefs;

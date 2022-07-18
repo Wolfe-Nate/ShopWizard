@@ -16,12 +16,12 @@ const userSchema = new Schema(
     email: {
       type: String,
       unique: true,
-      required: true,
-      match: [/.+@.+\..+/, "Must use a valid email address"],
+      // required: true,
+      // match: [/.+@.+\..+/, "Must use a valid email address"],
     },
     coins: {
       type: Number,
-      required: true,
+      // required: true,
       default: 200,
     },
     items: [
