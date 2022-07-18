@@ -1,5 +1,5 @@
 import Login from "./pages/Login";
-import SignUp from "./pages/SignUp";
+import SignUp from "../src/pages/Signup";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "../src/pages/Home";
