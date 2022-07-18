@@ -17,33 +17,14 @@ function Admin() {
         <tr>
           <th>Admin status</th>
         </tr>
-        <tr>
-          <td>User1</td>
-          <div
-            class="btn-group btn-group-toggle  d-flex justify-content-between"
-            data-toggle="buttons"
-          >
-            <label class="btn btn-secondary active">
-              <input
-                type="radio"
-                name="options"
-                id="option1"
-                autocomplete="off"
-                checked
-              ></input>
-              {"ON"}
-            </label>
-            <label class="btn btn-secondary">
-              <input
-                type="radio"
-                name="options"
-                id="option2"
-                autocomplete="off"
-              ></input>
-              {"OFF"}
-            </label>
-          </div>
-        </tr>
+        <td>User1</td>
+        {/* {user.name} */}
+        <td>
+          <label class="switch">
+            <input type="checkbox"></input>
+            <span class="slider round"></span>
+          </label>
+        </td>
       </table>
     </div>
   );
