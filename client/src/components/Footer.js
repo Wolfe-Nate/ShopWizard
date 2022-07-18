@@ -4,15 +4,15 @@ import '../styles/style.css';
 
 function Footer() {
   return (
-    <footer className="footer "
+    <div 
     style={{
         bottom: "0px",
-        fontSize: "20px",
-        padding: "0px",
+        // fontSize: "20px",
+        // float: "none"
       }}
     >
-      <h1>Foooter</h1>
-    </footer>
+      <h1 >Foooter</h1>
+    </div>
   );
 }
 
