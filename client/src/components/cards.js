@@ -12,20 +12,21 @@ const ItemCard = ({ items }) => {
         return <h3>No Items Yet</h3>;
     }
     return (
-        <div>
+        <div className='rpgui-container'  >
             {items &&
                 items.map((item) => (
-                    <div className="rpgui-content"
+                    <div className="rpgui-container framed rpgui-draggable"
                         style={{
                             width: '280px',
                             height: '415px',
+                            marginTop: "8rem",
+                            display: "inline-block",
+                            position: "relative"
                         }}
                     >
 
-                        <div className="rpgui-container framed rpgui-draggable"
-                            style={{
-                                left: '560px',
-                            }}
+                        <div
+                            
                         >
                             <h1>{item.itemName}</h1>
                         </div>
@@ -71,10 +72,10 @@ const ItemCard = ({ items }) => {
                         </div>
                         <hr className="golden-2" />
 
-                        <div
-                            style={{
-                                marginLeft: '25%',
-                            }}
+                        <div className='rpgui-content h3'
+                            // style={{
+                            //     marginLeft: '25%',
+                            // }}
                         >
                             <p>{item.gameName}</p>
                         </div>
