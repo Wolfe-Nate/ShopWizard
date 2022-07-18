@@ -2,16 +2,18 @@ import React from "react";
 
 function SignUp() {
   return (
+  <div class="rpgui-content">
     <div
-      class="rpgui-container framed rpgui-draggable"
+      class="rpgui-container framed "
       style={{
         marginLeft: "25%",
+        marginTop: "5%",
         position: "center",
         alignItems: "center",
         fontSize: ".9rem",
         padding: "1rem",
         height: "45%",
-        width: "45%",
+        width: "35%",
       }}
     >
       <h1>Sign Up</h1>
@@ -32,14 +34,15 @@ function SignUp() {
       <br />
       <br />
 
-      <label>Your hero bio:</label>
-      <textarea rows="3" cols="50"></textarea>
+      {/* <label>Your hero bio:</label>
+      <textarea rows="3" cols="50"></textarea> */}
       <button
         class="rpgui-button"
         type="button"
         style={{
           float: "right",
-          justifyContent: "center",
+          // justifyContent: "center",
+          position: "relative",
           fontSize: ".9rem",
           padding: "1rem",
           height: "15%",
@@ -48,9 +51,7 @@ function SignUp() {
       >
         <p
           style={{
-            position: "relative",
-            float: "right",
-            justifyContent: "center",
+            alignItems: "center",
             fontSize: ".9rem",
           }}
         >
@@ -59,6 +60,7 @@ function SignUp() {
       </button>
       <hr class="golden" />
       <a href="/login"> Already have an account? Log In</a>
+    </div>
     </div>
   );
 }
