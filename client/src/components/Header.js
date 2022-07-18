@@ -2,7 +2,7 @@ import React from 'react';
 
 import '../styles/style.css';
 import '../styles/bat.css'
-import speechBubble from '../img/speech-bubble.png'
+// import speechBubble from '../img/speech-bubble.png'
 
 
 function Header() {

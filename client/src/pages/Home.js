@@ -1,4 +1,5 @@
 import React from "react";
+import logout from "../App"
 // import { Link } from 'react-router-dom';
 // import Navbar from './components/Navbar';
 // import Header from '../components/Header';
@@ -17,7 +18,7 @@ function Home() {
         className="rpgui-container framed rpgui-draggable"
       >
         <card>
-          <button className="rpgui-button" type="button">
+          <button className="rpgui-button" type="button" onClick={logout}>
             <p>Logout</p>
           </button>
         </card>
