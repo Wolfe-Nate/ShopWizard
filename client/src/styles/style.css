@@ -10,7 +10,9 @@ inside your html file.
 */
 .background {
   background-image: url(https://slideswith.com/cdn-cgi/image/w=1900,h=1400,fit=contain,metadata=none,onerror=false/https://back.slideswith.com/storage/o/public/deck-1205/1609894215521-8bit-background.png?token=c34f92a8-82f0-41fe-a237-ffff8d372ed2);
-}
+  background-size: 100%;
+}  
+ 
 /* to get pixelated images (nearest-neighbor filter) on all  browsers */
 .rpgui-pixelated {
   -ms-interpolation-mode: nearest-neighbor;
