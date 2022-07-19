@@ -5,11 +5,12 @@ import { QUERY_ALL_ITEMS, QUERY_SINGLE_ITEM } from "../utils/queries";
 import ItemCard from "../components/cards";
 import { Link } from "react-router-dom";
 import Auth from "../utils/auth";
-// import QUERY_SINGLE_USER from "../utils/queries";
+// import  from "../utils/queries";
 
 function Home() {
   const { loading, data } = useQuery(QUERY_ALL_ITEMS);
   const items = data?.items || [];
+  // const userData = useQuery(QUERY_SINGLE_USER, {variables: _id})
   const logout = (event) => {
     event.preventDefault();
     Auth.logout();
@@ -45,11 +46,10 @@ function Home() {
   float: "right"
 }}
 >
-You have {QUERY_SINGLE_USER.coins} coins left!</p> */}
+You have {userData.coins} coins left!</p> */}
+{/* need user ID from queries.js */}
         </div>
       </div>
-      
-
       <div>
         {loading ? 
         <div>Loading...</div> : 
