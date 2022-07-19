@@ -91,7 +91,12 @@ const ItemCard = ({ items }) => {
                         //     marginLeft: '25%',
                         // }}
                         >
-                            <p>{item.gameName}</p>
+                            <p
+                            style={{
+                            fontSize: ".6rem",
+                            maxHeight: "5rem"
+                            }}
+                            >{item.gameName}</p>
                         </div>
                     </div>
                 ))}
