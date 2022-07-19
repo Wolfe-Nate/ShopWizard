@@ -46,15 +46,9 @@ export default function Card({ item, currentUser }) {
       </div>
       <hr className="golden" />
 
-      <div
-        src={itemInfo.image}
-        style={
-          {
-            // marginLeft: '25%',
-          }
-        }
-      >
-        {/* /* <img src={require("../public/items/ray-gun.jpg" ) }> </img> */}
+      <div>
+
+        <img src={item.image} alt={item.itemName} style={{ marginLeft: '25%', width: '120px', height: '120px', }}></img>
       </div>
 
       <div
@@ -96,9 +90,9 @@ export default function Card({ item, currentUser }) {
 
       <div
         className=""
-        // style={{
-        //     marginLeft: '25%',
-        // }}
+      // style={{
+      //     marginLeft: '25%',
+      // }}
       >
         <p>{itemInfo.gameName}</p>
       </div>
