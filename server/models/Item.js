@@ -9,7 +9,7 @@ const itemSchema = new Schema(
       trim: true,
     },
     // referencing an image filename we have in our repo
-    itemImage: {
+    image: {
       type: String,
       // required: true,
     },
