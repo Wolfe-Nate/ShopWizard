@@ -9,6 +9,7 @@ export const QUERY_USERS = gql`
     }
   }
 `;
+
 export const QUERY_ALL_ITEMS = gql`
   query getItems {
     items {
@@ -45,4 +46,43 @@ export const QUERY_SINGLE_ITEM = gql`
       commentCount
     }
   }
+`;
+
+export const QUERY_ME = gql`
+  query me {
+    me {
+      _id
+      username
+      coins
+      items {
+        _id
+        itemName
+        price
+        description
+        category
+        gameName
+      }
+      itemsCount
+      admin
+    }
+  }
+`;
+
+export const QUERY_SINGLE_USER = gql`
+  userId(_id: $id) {
+    _id
+    username
+    coins
+    items {
+      _id
+      itemName
+      price
+      description
+      category
+      gameName
+    }
+    itemsCount
+    admin
+  }
+}
 `;
