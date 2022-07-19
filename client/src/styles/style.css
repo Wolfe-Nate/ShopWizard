@@ -17,8 +17,29 @@ inside your html file.
 }  
 
 .speech-bubble {
-  image: url(../img/speech-bubble.png) ;
-}
+    /* hide button default stuff */
+    background-color: Transparent;
+    background-repeat: no-repeat;
+    border: none;
+    overflow: "";
+    outline: none;
+    /* background */
+    background: url(../img/speech-bubble.png) no-repeat no-repeat;
+    background-clip: padding-box;
+    background-origin: padding-box;
+    background-position: center;
+    background-size: 100% 80%;
+    /* default size and display */
+    max-width: 100%;
+    min-width: 140px;
+    height: 60px;
+    display: inline-block;
+    /* padding */
+    padding-top: 5px;
+    padding-left: 35px;
+    padding-right: 35px;
+    overflow: ""; }
+
 
 .coin {
     background-image: url("../img/radio-golden-off.png"); 
