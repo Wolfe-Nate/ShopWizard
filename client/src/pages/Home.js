@@ -5,12 +5,11 @@ import { QUERY_ALL_ITEMS, QUERY_SINGLE_ITEM } from "../utils/queries";
 import ItemCard from "../components/cards";
 import { Link } from "react-router-dom";
 import Auth from "../utils/auth";
-// import  from "../utils/queries";
+// import QUERY_SINGLE_USER from "../utils/queries";
 
 function Home() {
   const { loading, data } = useQuery(QUERY_ALL_ITEMS);
   const items = data?.items || [];
-  // const userData = useQuery(QUERY_SINGLE_USER, {variables: _id})
   const logout = (event) => {
     event.preventDefault();
     Auth.logout();
@@ -32,12 +31,43 @@ function Home() {
         }}
         
       >
-        <div  >
-          <button style={{
+      </div>
+      <button style={{
           left: "0px"
         }} className="rpgui-button" onClick={logout} type="button">
             <p>Logout</p>
           </button>
+
+          <a href="/inventory">
+          <button style={{
+          left: "0px"
+        }} className="rpgui-button"  type="button">
+            <p>Inventory</p>
+          </button></a>
+
+      <div>
+        <a href="/AddItem">
+          <button style={{
+          right: "0px"
+        }} className="rpgui-button"  type="button">
+            <p>Add Item</p>
+          </button></a>
+
+          <a href="/Admin">
+          <button style={{
+          right: "0px",
+            position: "relative"
+        }} className="rpgui-button"  type="button">
+            <p>Admin</p>
+          </button></a>
+        {loading ? 
+        <div>Loading...</div> : 
+      <ItemCard items={items} />}
+      </div>
+        <div  >
+          
+
+          
           
           {/* <p  
           style={{
@@ -46,16 +76,11 @@ function Home() {
   float: "right"
 }}
 >
-You have {userData.coins} coins left!</p> */}
-{/* need user ID from queries.js */}
+You have {QUERY_SINGLE_USER.coins} coins left!</p> */}
         </div>
-      </div>
-      <div>
-        {loading ? 
-        <div>Loading...</div> : 
-      <ItemCard items={items} />}
-      </div>
     </div>
+
+
   );
 }
 
