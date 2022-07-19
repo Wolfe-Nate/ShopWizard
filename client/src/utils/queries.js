@@ -68,21 +68,21 @@ export const QUERY_ME = gql`
   }
 `;
 
-export const QUERY_SINGLE_USER = gql`
-  userId(_id: $id) {
-    _id
-    username
-    coins
-    items {
-      _id
-      itemName
-      price
-      description
-      category
-      gameName
-    }
-    itemsCount
-    admin
-  }
-}
-`;
+// export const QUERY_SINGLE_USER = gql`
+//   userId(_id: $id) {
+//     _id
+//     username
+//     coins
+//     items {
+//       _id
+//       itemName
+//       price
+//       description
+//       category
+//       gameName
+//     }
+//     itemsCount
+//     admin
+//   }
+// }
+// `;

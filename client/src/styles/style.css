@@ -10,9 +10,18 @@ inside your html file.
 */
 .background {
   background-image: url(https://slideswith.com/cdn-cgi/image/w=1900,h=1400,fit=contain,metadata=none,onerror=false/https://back.slideswith.com/storage/o/public/deck-1205/1609894215521-8bit-background.png?token=c34f92a8-82f0-41fe-a237-ffff8d372ed2);
-  background-size: 100%;
+  background-size: auto;
+  /* min-height: 100vh; */
 }  
- 
+
+.speech-bubble {
+  image: url(../img/speech-bubble.png) ;
+}
+
+.coin {
+    background-image: url("../img/radio-golden-off.png"); 
+}
+
 /* to get pixelated images (nearest-neighbor filter) on all  browsers */
 .rpgui-pixelated {
   -ms-interpolation-mode: nearest-neighbor;
@@ -60,7 +69,7 @@ inside your html file.
   background-color: Transparent;
   background-repeat: no-repeat;
   border: none;
-  overflow: hidden;
+  /* overflow: auto; */
   outline: none;
   /* background */
   background: url("../img/button.png") no-repeat no-repeat;
@@ -99,7 +108,7 @@ inside your html file.
   background-color: Transparent;
   background-repeat: no-repeat;
   border: none;
-  overflow: hidden;
+  overflow: "";
   outline: none;
   /* background */
   background: url("../img/button-golden.png") no-repeat no-repeat;
@@ -116,7 +125,7 @@ inside your html file.
   padding-top: 5px;
   padding-left: 35px;
   padding-right: 35px;
-  overflow: visible; }
+  overflow: ""; }
 
 /* button hover */
 .rpgui-button.golden.hover,
@@ -214,7 +223,7 @@ inside your html file.
   left: 0px;
   top: 0px;
   position: fixed;
-  overflow: hidden;
+  overflow: "";
   font-size: 0.8em; }
 
 /* general rules to apply on anything inside the content */
@@ -248,7 +257,7 @@ inside your html file.
 /* game div without background image*/
 .rpgui-container {
   /* position style and default z */
-  position: fixed;
+  /* position: fixed; */
   z-index: 10;
   overflow: show; }
 
@@ -294,7 +303,6 @@ inside your html file.
 
 /* game div with golden2 background image*/
 .rpgui-container.framed-golden-2 {
-  position: relative;
   /* border */
   border-style: solid;
   border-image-source: url("../img/border-image-golden2.png");
@@ -482,13 +490,6 @@ ul.rpgui-dropdown-imp {
   width: 64px;
   height: 64px; }
 
-.rpgui-icon.coin {
-  background-image: url("../img/radio-golden-off.png");
-}
-.rpgui-icon.rslogo {
-  background-image: url("../img/RSLogo.jpg");
-}
-
 .rpgui-icon.sword {
   background-image: url("../img/icons/sword.png"); }
 
@@ -589,7 +590,7 @@ ul.rpgui-dropdown-imp {
   min-height: 40px;
   margin-top: 0px;
   /* scrollers */
-  overflow-x: hidden;
+  overflow-x: scroll;
   overflow-y: scroll;
   /* border */
   border-style: solid;
@@ -983,45 +984,3 @@ ul.rpgui-list-imp {
   left: 40px;
   background-image: url("../img/slider-thumb-golden.png");
   background-size: 100% 100%; }
-
-
-
-.hovertext {
-  position: relative;
-  border-bottom: 1px dotted black;
-}
-
-.hovertext:before {
-  content: attr(data-hover);
-  visibility: hidden;
-  opacity: 0;
-  width: 140px;
-  background-color: black;
-  color: #fff;
-  text-align: center;
-  border-radius: 5px;
-  padding: 5px 0;
-  transition: opacity 1s ease-in-out;
-
-  position: absolute;
-  z-index: 1;
-  left: 0;
-  top: 110%;
-}
-
-.hovertext:hover:before {
-  opacity: 1;
-  visibility: visible;
-}
-
-.itemImage {
-  display: inline-block;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  width: 120px;
-  height: 120px;}
-
-.itemImage.scimitar {
-  background-image: url("../img/dragon_scimitar.jpg");
-}
-

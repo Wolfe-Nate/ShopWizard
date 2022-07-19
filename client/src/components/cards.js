@@ -14,7 +14,8 @@ const ItemCard = ({ items }) => {
     return (
         <div className='' 
         style={{
-            padding: ".5rem"
+            padding: ".5rem",
+            overflow: "auto"
         }}
         >
             {items &&
@@ -24,10 +25,11 @@ const ItemCard = ({ items }) => {
                             width: '280px',
                             height: '415px',
                             marginTop: "8rem",
-                            marginLeft: "3rem",
+                            // marginLeft: "3rem",
                             display: "inline-block",
                             position: "relative",
-                            padding: "1rem"
+                            padding: "1rem",
+                            
                         }}
                     >
 
@@ -45,19 +47,20 @@ const ItemCard = ({ items }) => {
                                 // marginLeft: '25%',
                             }}
                         >
-                            {/* <img src={require("../public/items/ray-gun.jpg" ) }> </img> */}
+                            {/* /* <img src={require("../public/items/ray-gun.jpg" ) }> </img> */ }
                         </div>
 
                         <div className="rpgui-container framed-golden-2"
                             style={{
-                                marginTop: '5px',
+                                // marginTop: '5px',
                                 width: '100%',
                                 height: '90px',
-                                left: '0px',
-                                top: '0px',
+                                // left: '0px',
+                                // top: '0px',
                                 
                             }}
-                        >
+                            >
+                            
                             <label>{item.description}.</label>
                         </div>
                         <hr className="golden" />
