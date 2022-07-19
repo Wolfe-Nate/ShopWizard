@@ -8,6 +8,7 @@ const typeDefs = gql`
   type Item {
     _id: ID
     itemName: String
+    image: String
     price: Int
     description: String
     category: String

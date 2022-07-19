@@ -15,6 +15,7 @@ export const QUERY_ALL_ITEMS = gql`
     items {
       _id
       itemName
+      image
       price
       description
       category
@@ -68,21 +69,22 @@ export const QUERY_ME = gql`
   }
 `;
 
-// export const QUERY_SINGLE_USER = gql`
-//   userId(_id: $id) {
-//     _id
-//     username
-//     coins
-//     items {
-//       _id
-//       itemName
-//       price
-//       description
-//       category
-//       gameName
-//     }
-//     itemsCount
-//     admin
-//   }
-// }
-// `;
+export const QUERY_SINGLE_USER = gql`
+  query userId {
+    userId(_id: $id) {
+      _id
+      username
+      coins
+      items {
+        _id
+        itemName
+        price
+        description
+        category
+        gameName
+      }
+      itemsCount
+      admin
+    }
+  }
+`;
