@@ -31,12 +31,43 @@ function Home() {
         }}
         
       >
-        <div  >
-          <button style={{
+      </div>
+      <button style={{
           left: "0px"
         }} className="rpgui-button" onClick={logout} type="button">
             <p>Logout</p>
           </button>
+
+          <a href="/inventory">
+          <button style={{
+          left: "0px"
+        }} className="rpgui-button"  type="button">
+            <p>Inventory</p>
+          </button></a>
+
+      <div>
+        <a href="/AddItem">
+          <button style={{
+          right: "0px"
+        }} className="rpgui-button"  type="button">
+            <p>Add Item</p>
+          </button></a>
+
+          <a href="/Admin">
+          <button style={{
+          right: "0px",
+            position: "relative"
+        }} className="rpgui-button"  type="button">
+            <p>Admin</p>
+          </button></a>
+        {loading ? 
+        <div>Loading...</div> : 
+      <ItemCard items={items} />}
+      </div>
+        <div  >
+          
+
+          
           
           {/* <p  
           style={{
@@ -47,15 +78,9 @@ function Home() {
 >
 You have {QUERY_SINGLE_USER.coins} coins left!</p> */}
         </div>
-      </div>
-      
-
-      <div>
-        {loading ? 
-        <div>Loading...</div> : 
-      <ItemCard items={items} />}
-      </div>
     </div>
+
+
   );
 }
 
