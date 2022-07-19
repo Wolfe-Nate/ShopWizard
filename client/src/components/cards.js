@@ -25,7 +25,7 @@ const ItemCard = ({ items }) => {
                             width: '280px',
                             height: '415px',
                             marginTop: "8rem",
-                            // marginLeft: "3rem",
+                            marginLeft: "3rem",
                             display: "inline-block",
                             position: "relative",
                             padding: "1rem",

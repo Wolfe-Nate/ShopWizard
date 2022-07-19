@@ -23,10 +23,12 @@ function Home() {
           padding: "2px",
           bottom: "0px",
         }}
-        className="rpgui-container framed rpgui-draggable"
+        
       >
-        <div>
-          <button className="rpgui-button" onClick={logout} type="button">
+        <div  >
+          <button style={{
+          left: "0px"
+        }} className="rpgui-button" onClick={logout} type="button">
             <p>Logout</p>
           </button>
         </div>
