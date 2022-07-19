@@ -3,7 +3,7 @@ import SignUp from "../src/pages/Signup";
 import Header from "./components/Header";
 import Inventory from "./pages/Inventory";
 import Home from "../src/pages/Home";
-import Additem from "./pages/Additem";
+import AddItem from "./pages/Additem";
 import Admin from "./pages/Admin";
 
 import { setContext } from "@apollo/client/link/context";
@@ -46,18 +46,17 @@ function App() {
         <Header />
         <Router>
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/signup" element={<SignUp />} />
-            <Route path="/Additem" element={<Additem />} />
-            <Route path="/Admin" element={<Admin />} />
-            <Route path="/Inventory" element={<Inventory/>} />
+            <Route exact path="/" element={<Home />} />
+            <Route exact path="/login" element={<Login />} />
+            <Route exact path="/signup" element={<SignUp />} />
+            <Route exact path="/AddItem" element={<AddItem />} />
+            <Route exact path="/Admin" element={<Admin />} />
+            <Route exact path="/Inventory" element={<Inventory />} />
           </Routes>
         </Router>
       </div>
     </ApolloProvider>
   );
 }
-
 
 export default App;
