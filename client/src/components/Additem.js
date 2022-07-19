@@ -45,10 +45,6 @@ const AddItemForm = () => {
       console.error(err);
     }
   };
-
-  const handleChange = (event) => {
-    const {}
-  }
 }
 
 
