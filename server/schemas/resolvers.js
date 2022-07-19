@@ -19,8 +19,16 @@ const resolvers = {
     // By adding context to our query, we can retrieve the logged in user without specifically searching for them
     me: async (parent, args, context) => {
       if (context.user) {
-        return Profile.findOne({ _id: context.user._id });
+        try {
+          const result = await User.findOne({ _id: context.user._id });
+          // console.log(result);
+          return result;
+        } catch (error) {
+          console.log(error);
+          return error;
+        }
       }
+      console.log("Not logged in");
       throw new AuthenticationError("You need to be logged in!");
     },
     // me: async (parent, args, context) => {
