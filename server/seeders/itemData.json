@@ -2,7 +2,7 @@
 [
     {
     "itemName": "Dragon Scimitar",
-    "image": "",
+    "image": "/items/Dragon_scim.png",
     "price": 250,
     "description": "A vicious, curved sword.",
     "category": "Weapon",
@@ -10,7 +10,7 @@
     },
     {
     "itemName": "Abyssal Whip",
-    "image": "../client/src/img/items/Abyssal_Whip.png",
+    "image": "/items/Abyssal_Whip.png",
     "price": 1500,
     "description": "A weapon from the Abyss.",
     "category": "Weapon",
@@ -18,7 +18,7 @@
     },
     {
     "itemName": "Arthur Morgan's Hat",
-    "image": "",
+    "image": "/items/Author_Morgan's_Hat.png",
     "price": 100,
     "description": "A nice Wide-brimmed cowboy hat",
     "category": "Cosmetic",
@@ -26,7 +26,7 @@
     },
     {
     "itemName": "Ray-Gun",
-    "image": "",
+    "image": "/items/ray-gun.jpg",
     "price": 600,
     "description": "Pew-Pew",
     "category": "Weapon",
@@ -34,7 +34,7 @@
     },
     {
     "itemName": "Cactus Juice",
-    "image": "",
+    "image": "/items/Cactus_Juice.png",
     "price": 50,
     "description": "Its the JUICIEST!",
     "category": "Consumable",
@@ -42,7 +42,7 @@
     },
     {
     "itemName": "Dragon ChainBody",
-    "image": "",
+    "image": "/items/Dragon_ChainBody.png",
     "price": 500,
     "description": "A series of connected metal rings.",
     "category": "Armor",
@@ -50,7 +50,7 @@
     },
     {
     "itemName": "Battle Rifle",
-    "image": "",
+    "image": "/items/Dragon_ChainBody.png",
     "price": 500,
     "description": "A Spartan's weapon of choice.",
     "category": "Weapon",
@@ -58,7 +58,7 @@
     },
     {
     "itemName": "Traveler's Straw Hat",
-    "image": "",
+    "image": "/items/Dragon_ChainBody.png",
     "price": 120,
     "description": "Keeps the sun out of your face as you explore.",
     "category": "Armor",
@@ -66,7 +66,7 @@
     },
     {
     "itemName": "Master's Sword",
-    "image": "",
+    "image": "/items/Dragon_ChainBody.png",
     "price": 5000,
     "description": "A sword that never breaks.",
     "category": "Weapon",
@@ -74,7 +74,7 @@
     },
     {
     "itemName": "Chainsaw",
-    "image": "",
+    "image": "/items/Dragon_ChainBody.png",
     "price": 80,
     "description": "Great for trees, better for monsters.",
     "category": "Weapon",
@@ -82,7 +82,7 @@
     },
     {
     "itemName": "Gravity Gloves",
-    "image": "",
+    "image": "/items/Dragon_ChainBody.png",
     "price": 1500,
     "description": "For those hard to reach loot items.",
     "category": "Armor",
@@ -90,7 +90,7 @@
     },
     {
     "itemName": "The Hammer",
-    "image": "",
+    "image": "/items/Dragon_ChainBody.png",
     "price": 400,
     "description": "The single most annoying item in Smash.",
     "category": "Weapon",
@@ -98,7 +98,7 @@
     },
     {
     "itemName": "Lancer",
-    "image": "",
+    "image": "/items/Dragon_ChainBody.png",
     "price": 2000,
     "description": "Great for close range combat...",
     "category": "Weapon",
@@ -106,7 +106,7 @@
     },
     {
     "itemName": "Crowbar",
-    "image": "",
+    "image": "/items/Dragon_ChainBody.png",
     "price": 25,
     "description": "An iconic tool-turned-weapon.",
     "category": "Weapon",
@@ -114,7 +114,7 @@
     },
     {
     "itemName": "Red Shell",
-    "image": "",
+    "image": "/items/Dragon_ChainBody.png",
     "price": 60,
     "description": "The worst sound to hear in first place.",
     "category": "Weapon",
@@ -122,7 +122,7 @@
     },
     {
     "itemName": "Kraber",
-    "image": "",
+    "image": "/items/Dragon_ChainBody.png",
     "price": 3000,
     "description": "Duck!",
     "category": "Weapon",
@@ -130,7 +130,7 @@
     },
     {
     "itemName": "Energy Sword",
-    "image": "",
+    "image": "/items/Dragon_ChainBody.png",
     "price": 5000,
     "description": "....run",
     "category": "Weapon",
@@ -138,7 +138,7 @@
     },
     {
     "itemName": "Diamond Pickaxe",
-    "image": "",
+    "image": "/items/Dragon_ChainBody.png",
     "price": 5000,
     "description": "Mine to your heart's content.",
     "category": "Weapon",

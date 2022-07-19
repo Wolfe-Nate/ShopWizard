@@ -23,7 +23,7 @@ const ItemCard = ({ items }) => {
                     <div className="rpgui-container framed rpgui-draggable"
                         style={{
                             width: '280px',
-                            height: '450px',
+                            height: '520px',
                             marginTop: "8rem",
                             marginLeft: "3rem",
                             display: "inline-block",
@@ -42,12 +42,9 @@ const ItemCard = ({ items }) => {
                         </div>
                         <hr className="golden" />
 
-                        <div src={items.image}
-                            style={{
-                                // marginLeft: '25%',
-                            }}
-                        >
-                            {/* /* <img src={require("../public/items/ray-gun.jpg" ) }> </img> */}
+                        <div>
+                            <img src={item.image} alt={item.itemName} style={{ marginLeft: '25%', width: '120px', height: '120px', }}
+                            ></img>
                         </div>
 
                         <div className="rpgui-container framed-golden-2"
