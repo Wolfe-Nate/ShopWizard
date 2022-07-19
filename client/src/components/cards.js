@@ -12,11 +12,11 @@ const ItemCard = ({ items }) => {
         return <h3>No Items Yet</h3>;
     }
     return (
-        <div className='' 
-        style={{
-            padding: ".5rem",
-            overflow: "auto"
-        }}
+        <div className=''
+            style={{
+                padding: ".5rem",
+                overflow: "auto"
+            }}
         >
             {items &&
                 items.map((item) => (
@@ -29,7 +29,7 @@ const ItemCard = ({ items }) => {
                             display: "inline-block",
                             position: "relative",
                             padding: "1rem",
-                            
+
                         }}
                     >
 
@@ -47,7 +47,7 @@ const ItemCard = ({ items }) => {
                                 // marginLeft: '25%',
                             }}
                         >
-                            {/* /* <img src={require("../public/items/ray-gun.jpg" ) }> </img> */ }
+                            {/* /* <img src={require("../public/items/ray-gun.jpg" ) }> </img> */}
                         </div>
 
                         <div className="rpgui-container framed-golden-2"
@@ -57,10 +57,10 @@ const ItemCard = ({ items }) => {
                                 height: '90px',
                                 // left: '0px',
                                 // top: '0px',
-                                
+
                             }}
-                            >
-                            
+                        >
+
                             <label>{item.description}.</label>
                         </div>
                         <hr className="golden" />
@@ -68,7 +68,7 @@ const ItemCard = ({ items }) => {
                         <div className="rpgui-icon coin hovertext"
                             style={{
                                 marginLeft: '25px',
-                                marginRight: '25px',
+                                // marginRight: '25px',
                                 // data-hover= {item.price}, 
                             }}
                         >
@@ -78,7 +78,7 @@ const ItemCard = ({ items }) => {
                         <div className="rpgui-icon sword hovertext"
                             style={{
                                 marginLeft: '25px',
-                                marginRight: '25px',
+                                // marginRight: '25px',
                                 // data-hover={item.category},
                             }}
                         >
@@ -87,9 +87,9 @@ const ItemCard = ({ items }) => {
                         <hr className="golden-2" />
 
                         <div className=''
-                            // style={{
-                            //     marginLeft: '25%',
-                            // }}
+                        // style={{
+                        //     marginLeft: '25%',
+                        // }}
                         >
                             <p>{item.gameName}</p>
                         </div>
