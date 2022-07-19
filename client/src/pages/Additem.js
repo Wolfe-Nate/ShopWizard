@@ -1,6 +1,7 @@
 import React from "react";
 
 function Additem() {
+  // const {loading, data}
   return (
     <div
       class="rpgui-container framed rpgui-draggable"
@@ -52,22 +53,22 @@ function Additem() {
         <br />
         <br />
         <p>What Category is this Item? (Choose Only One)</p>
-        <input type="checkbox" id="weapon" name="Weapon" value="Weapon" />
         <label for="weapon">WEAPON</label>
+        <input type="checkbox" id="weapon" name="Weapon" value="Weapon" />
         <br />
-        <input type="checkbox" id="armor" name="Armor" value="Armor" />
         <label for="armor">ARMOR</label>
+        <input type="checkbox" id="armor" name="Armor" value="Armor" />
         <br />
+        <label for="consumable">CONSUMABLE</label>
         <input
           type="checkbox"
           id="consumable"
           name="consumable"
           value="consumable"
         />
-        <label for="consumable">CONSUMABLE</label>
         <br />
-        <input type="checkbox" id="cosmetic" name="cosmetic" value="cosmetic" />
         <label for="cosmetic">COSMETIC</label>
+        <input type="checkbox" id="cosmetic" name="cosmetic" value="cosmetic" />
         <br />
       </form>
     </div>
