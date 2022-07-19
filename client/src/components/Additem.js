@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useMutation } from "@apollo/client";
 
 import { ADD_ITEM } from "../utils/mutations";
-import Additem from "../pages/Additem";
+import AddItem from "../pages/AddItem";
 import { QUERY_ALL_ITEMS } from "../utils/queries";
 
 const AddItemForm = () => {
@@ -13,25 +13,26 @@ const AddItemForm = () => {
     category: "",
     $gameName: "",
   });
-  const [addItem, {error}] = useMutation(ADD_ITEM, {update(cache, { data: {addItem} }) {
-    try{
-      const { getItems } = cache.readQuery({query: QUERY_ALL_ITEMS});
+  const [addItem, { error }] = useMutation(ADD_ITEM, {
+    update(cache, { data: { addItem } }) {
+      try {
+        const { getItems } = cache.readQuery({ query: QUERY_ALL_ITEMS });
 
-      cache.writeQuery({
-        query: QUERY_ALL_ITEMS,
-        data: { getItems: [addItem, ...getItems] },
-      });
-    } catch (e) {
-      console.error(e)
-    }
-  },
-});
+        cache.writeQuery({
+          query: QUERY_ALL_ITEMS,
+          data: { getItems: [addItem, ...getItems] },
+        });
+      } catch (e) {
+        console.error(e);
+      }
+    },
+  });
   const handleFormSubmit = async (event) => {
     event.preventDefault();
 
-    try{
+    try {
       const { data } = await addItem({
-        variable: {...formState },
+        variable: { ...formState },
       });
 
       setFormState({
@@ -45,7 +46,6 @@ const AddItemForm = () => {
       console.error(err);
     }
   };
-}
+};
 
-
-export default Additem;
+export default AddItem;
