@@ -2,7 +2,7 @@ import React from 'react';
 
 import '../styles/style.css';
 import '../styles/bat.css'
-// import speechBubble from '../img/speech-bubble.png'
+import speechBubble from '../img/speech-bubble.png'
 
 
 function Header() {
@@ -14,13 +14,19 @@ function Header() {
       }}
     >
       <h1>SHOP WIZARD</h1>
+
       <div class="bat" >
-        {/* <img 
+ 
+      </div>
+          
+{/* <img 
 src={speechBubble} alt="speech bubble"
 style={{
-  width: "5000%",
-}}/> */}
-      </div>
+  width: "13%",
+  // float: "right"
+}}
+/> */}
+
     </header>
   );
 }

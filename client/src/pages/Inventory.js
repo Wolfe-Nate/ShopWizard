@@ -4,19 +4,31 @@ import '../styles/style.css';
 
 
 function Inventory() {
-
+//   if (!Inventory.length) {
+//     return <h3 style={{
+//       fontSize: "2rem"
+//     }} className="rpgui-container framed rpgui-draggable" >No Inventory Items Yet!</h3>;
+// }
 return (
 <div
         className="rpgui-container framed rpgui-draggable"
         style={{
-          bottom: "0px",
-          right: "0px",
+          maxWidth: "70%",
+          marginLeft: "15%",
+
         }}
       >
-        <h1>Inventory</h1>
+        <h1
+        style={{
+          fontSize: "2rem"
+        }}
+        >Inventory</h1>
         <hr />
 
-        <div className="rpgui-icon sword"></div>
+
+
+
+        {/* <div className="rpgui-icon sword"></div>
         <div className="rpgui-icon shield"></div>
         <div className="rpgui-icon exclamation"></div>
         <br />
@@ -44,7 +56,7 @@ return (
         <div className="rpgui-icon shoes-slot"></div>
         <div className="rpgui-icon empty-slot"></div>
         <br />
-        <br />
+        <br /> */}
       </div>
       )}
 
