@@ -23,7 +23,7 @@ const ItemCard = ({ items }) => {
                     <div className="rpgui-container framed rpgui-draggable"
                         style={{
                             width: '280px',
-                            height: '415px',
+                            height: '450px',
                             marginTop: "8rem",
                             marginLeft: "3rem",
                             display: "inline-block",
@@ -92,6 +92,17 @@ const ItemCard = ({ items }) => {
                         // }}
                         >
                             <p>{item.gameName}</p>
+                        </div>
+                        <div>
+                            <button className="rpgui-button golden" type="button"
+                                style={{
+                                    marginLeft: "4%"
+                                }}>
+                                <p style={{
+                                    marginTop: "13px"
+                                }}>Purchase Item</p>
+
+                            </button>
                         </div>
                     </div>
                 ))}
