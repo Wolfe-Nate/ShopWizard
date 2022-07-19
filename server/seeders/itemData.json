@@ -26,7 +26,7 @@
     },
     {
     "itemName": "Ray-Gun",
-    "image": "/items/ray-gun.jpg",
+    "image": "/items/ray-gun.png",
     "price": 600,
     "description": "Pew-Pew",
     "category": "Weapon",
@@ -50,23 +50,23 @@
     },
     {
     "itemName": "Battle Rifle",
-    "image": "/items/Dragon_ChainBody.png",
+    "image": "/items/br.png",
     "price": 500,
     "description": "A Spartan's weapon of choice.",
     "category": "Weapon",
     "gameName": "Halo 2"
     },
     {
-    "itemName": "Traveler's Straw Hat",
-    "image": "/items/Dragon_ChainBody.png",
+    "itemName": "Wanderer's Straw Hat",
+    "image": "/items/straw_hat.png",
     "price": 120,
-    "description": "Keeps the sun out of your face as you explore.",
+    "description": "Keeps the sun out of your eyes as you explore.",
     "category": "Armor",
     "gameName": "Ghost of Tsushima"
     },
     {
-    "itemName": "Master's Sword",
-    "image": "/items/Dragon_ChainBody.png",
+    "itemName": "Master Sword",
+    "image": "/items/Master_Sword.png",
     "price": 5000,
     "description": "A sword that never breaks.",
     "category": "Weapon",
@@ -74,7 +74,7 @@
     },
     {
     "itemName": "Chainsaw",
-    "image": "/items/Dragon_ChainBody.png",
+    "image": "/items/chainsaw.png",
     "price": 80,
     "description": "Great for trees, better for monsters.",
     "category": "Weapon",
@@ -82,7 +82,7 @@
     },
     {
     "itemName": "Gravity Gloves",
-    "image": "/items/Dragon_ChainBody.png",
+    "image": "/items/gravity_gloves.png",
     "price": 1500,
     "description": "For those hard to reach loot items.",
     "category": "Armor",
@@ -90,7 +90,7 @@
     },
     {
     "itemName": "The Hammer",
-    "image": "/items/Dragon_ChainBody.png",
+    "image": "/items/hammer.png",
     "price": 400,
     "description": "The single most annoying item in Smash.",
     "category": "Weapon",
@@ -98,7 +98,7 @@
     },
     {
     "itemName": "Lancer",
-    "image": "/items/Dragon_ChainBody.png",
+    "image": "/items/lancer.png",
     "price": 2000,
     "description": "Great for close range combat...",
     "category": "Weapon",
@@ -106,7 +106,7 @@
     },
     {
     "itemName": "Crowbar",
-    "image": "/items/Dragon_ChainBody.png",
+    "image": "/items/crowbar.png",
     "price": 25,
     "description": "An iconic tool-turned-weapon.",
     "category": "Weapon",
@@ -114,7 +114,7 @@
     },
     {
     "itemName": "Red Shell",
-    "image": "/items/Dragon_ChainBody.png",
+    "image": "/items/red-shell.png",
     "price": 60,
     "description": "The worst sound to hear in first place.",
     "category": "Weapon",
@@ -122,7 +122,7 @@
     },
     {
     "itemName": "Kraber",
-    "image": "/items/Dragon_ChainBody.png",
+    "image": "/items/kraber.png",
     "price": 3000,
     "description": "Duck!",
     "category": "Weapon",
@@ -130,7 +130,7 @@
     },
     {
     "itemName": "Energy Sword",
-    "image": "/items/Dragon_ChainBody.png",
+    "image": "/items/energy_sword.png",
     "price": 5000,
     "description": "....run",
     "category": "Weapon",
@@ -138,7 +138,7 @@
     },
     {
     "itemName": "Diamond Pickaxe",
-    "image": "/items/Dragon_ChainBody.png",
+    "image": "/items/pickaxe.png",
     "price": 5000,
     "description": "Mine to your heart's content.",
     "category": "Weapon",
