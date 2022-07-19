@@ -2,7 +2,7 @@
 [
     {
     "itemName": "Dragon Scimitar",
-    "image": "Dragon_scim.png",
+    "image": "",
     "price": 250,
     "description": "A vicious, curved sword.",
     "category": "Weapon",
@@ -10,7 +10,7 @@
     },
     {
     "itemName": "Abyssal Whip",
-    "image": "",
+    "image": "../client/src/img/items/Abyssal_Whip.png",
     "price": 1500,
     "description": "A weapon from the Abyss.",
     "category": "Weapon",
