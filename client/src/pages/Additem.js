@@ -70,6 +70,14 @@ function Additem() {
         <label for="cosmetic">COSMETIC</label>
         <input type="checkbox" id="cosmetic" name="cosmetic" value="cosmetic" />
         <br />
+        {/* need to add the handleFormSubmit from the component */}
+        <button
+          className="rpgui-button"
+          style={{ cursor: "pointer" }}
+          type="submit"
+        >
+          Submit
+        </button>
       </form>
     </div>
   );
