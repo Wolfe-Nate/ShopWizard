@@ -1,7 +1,7 @@
 import Login from "./pages/Login";
 import SignUp from "../src/pages/Signup";
 import Header from "./components/Header";
-import Footer from "./components/Footer";
+// import Inventory from "./components/Inventory";
 import Home from "../src/pages/Home";
 import Additem from "./pages/Additem";
 import Admin from "./pages/Admin";
@@ -44,6 +44,7 @@ function App() {
     <ApolloProvider client={client}>
       <div className="rpgui-content h1">
         <Header />
+        {/* <Inventory/> */}
         <Router>
           <Routes>
             <Route path="/" element={<Home />} />
@@ -53,7 +54,6 @@ function App() {
             <Route path="/Admin" element={<Admin />} />
           </Routes>
         </Router>
-        <Footer />
       </div>
     </ApolloProvider>
   );

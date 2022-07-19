@@ -12,7 +12,11 @@ const ItemCard = ({ items }) => {
         return <h3>No Items Yet</h3>;
     }
     return (
-        <div className='rpgui-container'  >
+        <div className='' 
+        style={{
+            padding: ".5rem"
+        }}
+        >
             {items &&
                 items.map((item) => (
                     <div className="rpgui-container framed rpgui-draggable"
@@ -20,13 +24,17 @@ const ItemCard = ({ items }) => {
                             width: '280px',
                             height: '415px',
                             marginTop: "8rem",
+                            marginLeft: "3rem",
                             display: "inline-block",
-                            position: "relative"
+                            position: "relative",
+                            padding: "1rem"
                         }}
                     >
 
                         <div
-                            
+                            style={{
+                                padding: ".2rem"
+                            }}
                         >
                             <h1>{item.itemName}</h1>
                         </div>
@@ -34,9 +42,11 @@ const ItemCard = ({ items }) => {
 
                         <div src={items.image}
                             style={{
-                                marginLeft: '25%',
+                                // marginLeft: '25%',
                             }}
-                        ></div>
+                        >
+                            {/* <img src={require("../public/items/ray-gun.jpg" ) }> </img> */}
+                        </div>
 
                         <div className="rpgui-container framed-golden-2"
                             style={{
@@ -45,6 +55,7 @@ const ItemCard = ({ items }) => {
                                 height: '90px',
                                 left: '0px',
                                 top: '0px',
+                                
                             }}
                         >
                             <label>{item.description}.</label>
@@ -72,7 +83,7 @@ const ItemCard = ({ items }) => {
                         </div>
                         <hr className="golden-2" />
 
-                        <div className='rpgui-content h3'
+                        <div className=''
                             // style={{
                             //     marginLeft: '25%',
                             // }}
