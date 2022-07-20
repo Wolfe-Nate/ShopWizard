@@ -1,21 +1,11 @@
-// import {useQuery, useMutation} from "@apollo/client"
-// import {QUERY_ME} from "../utils/queries"
-// import {ADD_ITEM} from "../utils/mutations"
+import React from "react";
+import { useQuery } from "@apollo/client";
+import { QUERY_USERS } from "../utils/queries";
 
 function Admin() {
-//   const [loading, data] = useQuery(QUERY_ME)
-//   const adminData = data?.me
-//   const [addItem, {error}] = useMutation(ADD_ITEM)
-
-// if(loading) {
-//   return <h2>
-//     Retrieving Admin
-//   </h2>
-// }
-
-// ^setup we need. make turnary statement that conditoinally renders button if logged in as admin. set the href for redirect to addItem page
-
-
+  const { loading, data } = useQuery(QUERY_USERS);
+  console.log(data);
+  const players = data?.users || [];
 
   return (
     <div
@@ -30,24 +20,35 @@ function Admin() {
         width: "45%",
       }}
     >
-      <h1>Users</h1>
-      <table>
-        <tr>
-          <th>Admin status</th>
-        </tr>
-        <td>User1</td>
-        {/* {adminData.name} */}
-        <td>
-          <label class="switch">
-            <input type="checkbox"></input>
-            <span class="slider round"></span>
-          </label>
-        </td>
-      </table>
+      {loading ? (
+        <h1>Loading data</h1>
+      ) : (
+        <div>
+          <h1>Users</h1>
+          <table>
+            <thead>
+              <tr>
+                <th>Admin status</th>
+              </tr>
+            </thead>
+            <tbody>
+              {players.map((player) => (
+                <tr>{player.username}</tr>
+              ))}
+            </tbody>
+          </table>
+          <ul>
+            <li>csmith</li>
+            <li>natew</li>
+            <li>Luke</li>
+            <li>Dylan</li>
+            <li>Jason</li>
+            <li>test1</li>
+            <li>Jim</li>
+          </ul>
+        </div>
+      )}
     </div>
   );
 }
 export default Admin;
-
-
-// 
