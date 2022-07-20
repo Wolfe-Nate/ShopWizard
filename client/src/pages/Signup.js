@@ -94,7 +94,7 @@ const Signup = () => {
               </div>
             )}
           </div>
-          <a href="/login"> Already have an account? Login</a>
+          <a href="/"> Already have an account? Login</a>
         </div>
       </div>
     </main>
