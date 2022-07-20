@@ -1,5 +1,5 @@
 import React from "react";
-import logout from "../App"
+import logout from "../App";
 import { useQuery } from "@apollo/client";
 import { QUERY_ALL_ITEMS, QUERY_SINGLE_ITEM } from "../utils/queries";
 import ItemCard from "../components/cards";
@@ -16,10 +16,11 @@ function Home() {
   };
 
   return (
-    <div className="rpgui-content"
-    style={{
-      overflowY: "scroll"
-    }}
+    <div
+      className="rpgui-content"
+      style={{
+        overflowY: "scroll",
+      }}
     >
       <div
         style={{
@@ -27,49 +28,60 @@ function Home() {
           fontSize: "20px",
           padding: "2px",
           bottom: "0px",
-          
         }}
-        
+      ></div>
+      <button
+        style={{
+          left: "0px",
+        }}
+        className="rpgui-button"
+        onClick={logout}
+        type="button"
       >
-      </div>
-      <button style={{
-          left: "0px"
-        }} className="rpgui-button" onClick={logout} type="button">
-            <p>Logout</p>
-          </button>
+        <p>Logout</p>
+      </button>
 
-          <Link to="/Inventory"></Link>
-          <button style={{
-          left: "0px"
-        }} className="rpgui-button"  type="button">
-            <p>Inventory</p>
-          </button>
+      <Link to="/Inventory">
+        <button
+          style={{
+            left: "0px",
+          }}
+          className="rpgui-button"
+          type="button"
+        >
+          <p>Inventory</p>
+        </button>
+      </Link>
 
       <div>
-        <Link to="/AddItem"></Link>
-          <button style={{
-          right: "0px"
-        }} className="rpgui-button"  type="button">
+        <Link to="/AddItem">
+          <button
+            style={{
+              right: "0px",
+            }}
+            className="rpgui-button"
+            type="button"
+          >
             <p>Add Item</p>
           </button>
+        </Link>
 
-          <Link to="/Admin"></Link>
-          <button style={{
-          right: "0px",
-            position: "relative"
-        }} className="rpgui-button"  type="button">
+        <Link to="/Admin">
+          <button
+            style={{
+              right: "0px",
+              position: "relative",
+            }}
+            className="rpgui-button"
+            type="button"
+          >
             <p>Admin</p>
           </button>
-        {loading ? 
-        <div>Loading...</div> : 
-      <ItemCard items={items} />}
+        </Link>
+        {loading ? <div>Loading...</div> : <ItemCard items={items} />}
       </div>
-        <div  >
-          
-
-          
-          
-          {/* <p  
+      <div>
+        {/* <p  
           style={{
   fontSize: ".8rem",
   color: "black",
@@ -77,10 +89,8 @@ function Home() {
 }}
 >
 You have {QUERY_SINGLE_USER.coins} coins left!</p> */}
-        </div>
+      </div>
     </div>
-
-
   );
 }
 
