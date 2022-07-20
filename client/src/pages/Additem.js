@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useMutation } from "@apollo/client";
-
+import { Link } from "react-router-dom";
 import { ADD_ITEM } from "../utils/mutations";
 import { QUERY_ALL_ITEMS } from "../utils/queries";
 
@@ -142,6 +142,7 @@ function AddItem() {
         <input type="radio" id="cosmetic" name="cosmetic" value="cosmetic" placeholder="co" />
         <br /> */}
 
+        <Link to="/Home">back to the homepage.</Link>
         <button
           className="rpgui-button"
           style={{ cursor: "pointer" }}

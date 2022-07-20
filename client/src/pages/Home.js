@@ -38,28 +38,28 @@ function Home() {
             <p>Logout</p>
           </button>
 
-          <a href="/inventory">
+          <Link to="/Inventory"></Link>
           <button style={{
           left: "0px"
         }} className="rpgui-button"  type="button">
             <p>Inventory</p>
-          </button></a>
+          </button>
 
       <div>
-        <a href="/AddItem">
+        <Link to="/AddItem"></Link>
           <button style={{
           right: "0px"
         }} className="rpgui-button"  type="button">
             <p>Add Item</p>
-          </button></a>
+          </button>
 
-          <a href="/Admin">
+          <Link to="/Admin"></Link>
           <button style={{
           right: "0px",
             position: "relative"
         }} className="rpgui-button"  type="button">
             <p>Admin</p>
-          </button></a>
+          </button>
         {loading ? 
         <div>Loading...</div> : 
       <ItemCard items={items} />}
